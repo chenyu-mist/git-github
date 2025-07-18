@@ -36,11 +36,11 @@ GitHub和Git的初步使用
 # 三、GitHub添加SSH秘钥
 * 1.登录自己的GitHub账号。
 * 2.点击右上角自己的头像，打开"setting"。
-* ![图片的alt信息，可空)](https://raw.githubusercontent.com/lnkDrop/work/master/img/sttings.png)
+* ![图片的alt信息，可空)](./img/sttings.png)
 * 3.左侧栏找到"SSH and GPS keys" 点击进入。
-* ![图片的alt信息，可空)](https://raw.githubusercontent.com/lnkDrop/work/master/img/SSH.png)
+* ![图片的alt信息，可空)](./img/SSH.png)
 * 4.右上角点击"New SSH key",
-![图片的alt信息，可空)](https://raw.githubusercontent.com/lnkDrop/work/master/img/newSSHkey.png)
+![图片的alt信息，可空)](./img/newSSHkey.png)
 
 会进入一个输入界面，Title随便取一个名字，最好是你当前使用的计算机名以便区分，然后将刚刚复制的keys粘贴到key框框中，点击Add SSH key。
 * 5.验证一下连接是否成功回到本机，打开Git Bash,输入命令
@@ -54,10 +54,10 @@ GitHub和Git的初步使用
 * 3.添加你的项目文件，一般GitHub默认有一个README文件，即说明文件，把他看做一个文本文件，用来说明描述项目或有关说明。我们首先创建它，输入$ echo "#测试说明" >> README.md 
 * 4.用git add添加文件进入git版本库，在此之前先输入`$ git status`来查看文件变动，看见标红的README.md文件说明此文件有新改动但是没有上传保存。我们将它添加进去，输入`$ git add README.md` 添加文件，再提交备注信息，输入`$ git commit -m "你的备注信息"`
 * 5.至此我们完成了文件的改动，但它还保留在本地，我们需要把他们上传到远程仓库GitHub里面，首先在你的GitHub上新建项目库（点击右上角头像左边的＋号，选择New repository）,然后在Repository name里自己起一个你的远程仓库名，其他默认，点击创建。
-* ![图片的alt信息，可空)](https://raw.githubusercontent.com/lnkDrop/work/master/img/new.png)
-* * ![图片的alt信息，可空)](https://raw.githubusercontent.com/lnkDrop/work/master/img/xmname.png)
+* ![图片的alt信息，可空)](./img/new.png)
+* * ![图片的alt信息，可空)](./img/xmname.png)
 * 6.在创建好的项目库中提示添加你的项目文件，我们的项目文件在本地，所以选择第一种，复制它的SSH
-* ![图片的alt信息，可空)](https://raw.githubusercontent.com/lnkDrop/work/master/img/copy.png)
+* ![图片的alt信息，可空)](./img/copy.png)
 * 7.关联github仓库：回到你的本地项目文件夹，绑定远程仓库，只需要在gitbash中输入`$ git remote add origin "粘贴第6步复制的SSH地址"(右键paste)`
 * 8.上传本地代码：执行`$ git branch -M main`先把本地的 mater 分支名改为 main 分支，因为github的仓库主分支叫 main ，而本地仓库主分支叫 master。
 * 9.接着输入 `$ git push -u origin main` 回车之后等待一段时间，可以看到文件上传成功，回到GitHub仓库下刷新看看，添加的文件有没有导入进来。如果能显示刚刚添加README文件就证明已经上传成功啦！
@@ -65,7 +65,7 @@ GitHub和Git的初步使用
 	*带上 -u 参数其实就相当于记录了push到远端分支的默认值，这样当下次我们还想要继续push的这个远端分支的时候推送命令就可以简写成 git push 即可，也就是添加-u参数后可以使后续提交命令变得简洁。如果不需要这样做的话可以直接使用 `$ git push origin main`。*
 
   
-* ![图片的alt信息，可空)](https://raw.githubusercontent.com/lnkDrop/work/master/img/test.png)
+* ![图片的alt信息，可空)](./img/test.png)
 * 项目合并 ` git pull --rebase origin main `
 
    *避坑 ：在上面创建远程仓库的时候，如果你勾选了 Initialize this repository with a README（就是创建仓库的时候自动给你创建一个README文件），那么到了第 9 将本地仓库内容推送到远程仓库的时候就会报一个 failed to push some refs to https://github.com/…git 的错。
@@ -99,7 +99,7 @@ git push 的其他操作命令:
 * 6
 	`$ git push -u origin master`-->上传代码及快速合并，把本地库的所有内容推送到远程库上
 * 7常用命令表：
-* ![图片的alt信息，可空)](https://raw.githubusercontent.com/lnkDrop/work/master/img/git.jpg)
+* ![图片的alt信息，可空)](./img/git.jpg)
 
 
 ---
@@ -126,5 +126,3 @@ git push 的其他操作命令:
 ### 注：img文件夹中有部分git指令运行截图,报错的先看有没有初始化本地仓库，然后看顺序有没有错。
 
 ### 需要反复执行的命令有第五条中的2,3,4,6点，1,5点第一次执行过就可以了，注意顺序不能颠倒。
-
-### README说明文件需要用到md编辑器，推荐下载Markdown编辑器进行编辑
